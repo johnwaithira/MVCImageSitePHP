@@ -41,3 +41,4 @@ require_once __DIR__."/../route/web.php";
 
 $app->run();
 
+?>
