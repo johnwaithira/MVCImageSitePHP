@@ -1,9 +1,10 @@
 <?php
 
+use Waithirajon\ImageUploadSiteMvc\app\controller\HomeController;
 use Waithirajon\ImageUploadSiteMvc\app\route\Route;
 
-Route::get('/','home');
-Route::get('/upload','upload');
+Route::get('/',[HomeController::class, 'home']);
+Route::get('/upload',[HomeController::class, 'upload']);
 Route::get('/gallery', 'view');
 
 

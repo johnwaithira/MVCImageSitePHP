@@ -49,7 +49,7 @@ class Router
             Application::$app->controller = new $callback[0]();
             $callback[0] = Application::$app->controller;
         }
-        
+
         return call_user_func($callback,$this->request);
     }
 
@@ -60,7 +60,11 @@ class Router
         $content = $this->content($view, $params);
 
         if (!empty(Application::$app->controller->layout)) {
-            return str_replace('{{ content }}', $content, $layout);
+            return str_replace(
+                '{{ content }}',
+                $content,
+                $layout
+            );
         }
         return $content;
     }
@@ -69,7 +73,13 @@ class Router
     {
 
         if (!empty(Application::$app->controller->layout)) {
-            $view = implode('/', explode('.',  Application::$app->controller->layout));
+            $view = implode(
+                '/',
+                explode(
+                    '.',
+                    Application::$app->controller->layout
+                )
+            );
         }
         ob_start();
         include_once Application::$rootpath."/resources/views/$view.php";
@@ -85,7 +95,13 @@ class Router
 
         ob_start();
 
-        $view = implode('/', explode('.',  $view));
+        $view = implode(
+            '/',
+            explode(
+                '.',
+                $view
+            )
+        );
         include_once Application::$rootpath."/resources/views/$view.php";
         return ob_get_clean();
     }
