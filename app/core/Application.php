@@ -16,7 +16,7 @@ class Application
     public static Application $app;
     public static $rootpath;
 
-    public function __construct($path)
+    public function __construct($path, $params)
     {
         self::$rootpath = $path;
         self::$app = $this;
