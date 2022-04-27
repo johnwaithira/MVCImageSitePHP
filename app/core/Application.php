@@ -3,7 +3,7 @@
 namespace Waithirajon\ImageUploadSiteMvc\app\core;
 use Waithirajon\ImageUploadSiteMvc\app\core\Request;
 use Waithirajon\ImageUploadSiteMvc\app\core\Response;
-use Waithirajon\ImageUploadSiteMvc\app\core\Request;
+use Waithirajon\ImageUploadSiteMvc\app\core\Router;
 class Application
 {
     public Response $response;
