@@ -26,4 +26,15 @@ class Router
     {
         $this->routes['post'][$path] = $callback;
     }
+
+    public function resolve()
+    {
+        $path = $this->request->path();
+        $method = $this->request->method();
+
+        $callback = $this->routes[$method][$path];
+
+        var_dump($callback);
+        exit();
+    }
 }
