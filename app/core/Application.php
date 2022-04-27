@@ -4,6 +4,8 @@ namespace Waithirajon\ImageUploadSiteMvc\app\core;
 use Waithirajon\ImageUploadSiteMvc\app\core\Request;
 use Waithirajon\ImageUploadSiteMvc\app\core\Response;
 use Waithirajon\ImageUploadSiteMvc\app\core\Router;
+use Waithirajon\ImageUploadSiteMvc\database\Database;
+
 class Application
 {
 
@@ -16,9 +18,12 @@ class Application
     public static Application $app;
     public static $rootpath;
 
+    public Database $db;
+
     public function __construct($path, $params)
     {
         self::$rootpath = $path;
+        $this->db = new Database($params);
         self::$app = $this;
         $this->controller = new Controller();
         $this->request = new Request();
