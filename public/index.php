@@ -23,6 +23,12 @@ require_once __DIR__."/../vendor/autoload.php";
 $dotenv = \Dotenv\Dotenv::createImmutable(dirname(__DIR__));
 $dotenv->load();
 
+
+$dbparams = [
+    'dsn' => $_ENV['DB_CONNECTION'].":host=" . $_ENV['DB_HOST'] .";dbname=".$_ENV['DB_DATABASE'],
+    'user' => $_ENV['DB_USERNAME'],
+    'password' => $_ENV['DB_PASSWORD']
+];
 /*
 *---------------------------------------------------------
 * Run The Application
