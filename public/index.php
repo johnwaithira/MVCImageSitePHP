@@ -9,7 +9,9 @@ $dotenv = \Dotenv\Dotenv::createImmutable(dirname(__DIR__));
 $dotenv->load();
 
 
-$app = new Application();
+$app = new Application(dirname(__DIR__));
+
+require_once __DIR__."/../route/web.php";
 
 $app->run();
 ?>
