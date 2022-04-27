@@ -1,0 +1,16 @@
+{
+    "name": "waithirajon/image-upload-site-mvc",
+    "description" :"Simple MVC Impage Uploader site in PHP",
+    "autoload": {
+        "psr-4": {
+            "Waithirajon\\ImageUploadSiteMvc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "John Waithira",
+            "email": "waithirajon@gmail.com"
+        }
+    ],
+    "require": {}
+}
