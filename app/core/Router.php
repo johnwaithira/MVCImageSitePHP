@@ -105,4 +105,18 @@ class Router
         include_once Application::$rootpath."/resources/views/$view.php";
         return ob_get_clean();
     }
+
+    public function resources($resource): void
+    {
+        ob_start();
+        $view = implode(
+            '/',
+            explode(
+                '.',
+                $resource
+            )
+        );
+        include_once Application::$rootpath."/resources/views/$view.php";
+        echo ob_get_clean();
+    }
 }

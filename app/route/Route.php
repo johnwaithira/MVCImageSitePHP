@@ -15,4 +15,8 @@ class Route
         return Application::$app->router->post($path, $callback);
     }
 
+    public static function resources($res)
+    {
+        return Application::$app->router->resources($res);
+    }
 }

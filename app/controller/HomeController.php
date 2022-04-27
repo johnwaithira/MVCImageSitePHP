@@ -14,6 +14,7 @@ class HomeController extends Controller
 
     public function upload()
     {
+        $this->setLayout('layout.app');
         return $this->view('upload');
     }
 }

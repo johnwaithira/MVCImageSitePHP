@@ -1,4 +1,14 @@
-<h1>Navigation</h1>
- {{ content }}
+<?php
 
-<h1>Footer</h1>
+use Waithirajon\ImageUploadSiteMvc\app\route\Route;
+
+Route::resources('layouts.head')
+?>
+<div class="body">
+    {{ content }}
+</div>
+<?php
+Route::resources('layouts.footer')
+?>
+
+
