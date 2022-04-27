@@ -3,7 +3,7 @@
     "description" :"Simple MVC Impage Uploader site in PHP",
     "autoload": {
         "psr-4": {
-            "Waithirajon\\ImageUploadSiteMvc\\": "src/"
+            "Waithirajon\\ImageUploadSiteMvc\\": "./"
         }
     },
     "authors": [

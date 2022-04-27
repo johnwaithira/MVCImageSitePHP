@@ -40,7 +40,7 @@ class ComposerStaticInit6ff18f59163bf07ffca79d8443f1f433
     public static $prefixDirsPsr4 = array (
         'Waithirajon\\ImageUploadSiteMvc\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
+            0 => __DIR__ . '/../..' . '/',
         ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (
