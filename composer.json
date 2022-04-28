@@ -9,7 +9,10 @@
     "authors": [
         {
             "name": "John Waithira",
-            "email": "waithirajon@gmail.com"
+            "email": "waithirajon@gmail.com",
+            "profession" : "Junior Software Engineer",
+            "country": "Kenya",
+            "gender" : "Male"
         }
     ],
     "require": {
