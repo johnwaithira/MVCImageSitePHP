@@ -2,7 +2,7 @@
     <nav>
         <div class="wrapper">
             <input  type="checkbox" name="checkNavBar"  id="checkNavBar">
-            <h1 class="logo"><a href="">instaGallery</a></h1>      
+            <h1 class="logo"><a href="/">instaGallery</a></h1>      
             <div class="nav-items">
                <div class="links">
                     <li class="nav-links"><a id="a" href="/">Home</a></li>
