@@ -1,5 +1,6 @@
 <?php
 
+use Waithirajon\ImageUploadSiteMvc\app\core\Templates\Form;
 use Waithirajon\ImageUploadSiteMvc\app\route\Route;
 
 Route::resources('layouts.head');
@@ -13,6 +14,20 @@ Route::resources('layouts.navigation');
                     404!
                 </p>
                 <p class="c_red f-s-20">Page not found</p>
+
+                <div class="p-10-0">
+                    <i class="f-s-20 "><?php echo str_replace('index.php/', '' , $_SERVER['PHP_SELF'])?></i>
+                </div>
+                <p>Broken link ?
+                    <?php $form = Form::begin('brokenlink', 'post') ?>
+                        <?php $form::field('brokenlink');?>
+                    <?php $form::end();?>
+                    <a href="./brokenlink<?php echo str_replace('index.php/', '' , $_SERVER['PHP_SELF'])?>" style="color: blue;">
+                        <button class="b-one p-10-15 m-l-20 bg-inherit">
+                            Report
+                        </button>
+                    </a>
+                <p>
             </div>
         </div>
     </div>
