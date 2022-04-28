@@ -1,7 +1,6 @@
 <?php
 
 use Waithirajon\ImageUploadSiteMvc\app\route\Route;
-
 Route::resources('layouts.head')
 ?>
 <div class="body">
