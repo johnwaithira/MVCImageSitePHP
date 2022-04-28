@@ -5,7 +5,7 @@
             <h1 class="logo"><a href="">instaGallery</a></h1>      
             <div class="nav-items">
                <div class="links">
-                    <li class="nav-links"><a id="a" href="#">Home</a></li>
+                    <li class="nav-links"><a id="a" href="/">Home</a></li>
                     <li class="nav-links"><a id="a" href="#">About</a></li>
                     <li class="nav-links"><a id="a" href="#">Projects</a></li>
                </div>
