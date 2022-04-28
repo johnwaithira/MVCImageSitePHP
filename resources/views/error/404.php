@@ -19,12 +19,23 @@ Route::resources('layouts.navigation');
                     <i class="f-s-20 "><?php echo str_replace('index.php/', '' , $_SERVER['PHP_SELF'])?></i>
                 </div>
                 <p>Broken link ?
-                    <?php $form = Form::begin('brokenlink', 'post') ?>
-                        <?php echo $form::field('brokenlink')->value(str_replace('index.php/', '' , $_SERVER['PHP_SELF']));?>
+                    <?php $form = Form::begin('/brokenlink', 'post') ?>
+        <div class="" style="visibility: hidden;">
+                        <?php 
+                            echo $form::field('brokenlink')->value(
+                                str_replace(
+                                    'index.php/',
+                                     '' ,
+                                      $_SERVER['PHP_SELF']
+                                    )
+                                )->hidden();
+                        ?>
+                    
+                        </div>
+                        <button type="submit" class="b-one p-10-15 m-l-20 bg-inherit">
+                            Report
+                        </button>
                     <?php $form::end();?>
-                      <button class="b-one p-10-15 m-l-20 bg-inherit">
-                          Report
-                      </button>
                 <p>
             </div>
         </div>
