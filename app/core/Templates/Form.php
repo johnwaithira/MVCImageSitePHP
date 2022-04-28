@@ -25,6 +25,6 @@ class Form
 
     public static function field($attribute)
     {
-        echo new Fields($attribute);
+        return new Fields($attribute);
     }
 }

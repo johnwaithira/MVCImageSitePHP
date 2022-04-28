@@ -20,13 +20,11 @@ Route::resources('layouts.navigation');
                 </div>
                 <p>Broken link ?
                     <?php $form = Form::begin('brokenlink', 'post') ?>
-                        <?php $form::field('brokenlink');?>
+                        <?php echo $form::field('brokenlink')->value(str_replace('index.php/', '' , $_SERVER['PHP_SELF']));?>
                     <?php $form::end();?>
-                    <a href="./brokenlink<?php echo str_replace('index.php/', '' , $_SERVER['PHP_SELF'])?>" style="color: blue;">
-                        <button class="b-one p-10-15 m-l-20 bg-inherit">
-                            Report
-                        </button>
-                    </a>
+                      <button class="b-one p-10-15 m-l-20 bg-inherit">
+                          Report
+                      </button>
                 <p>
             </div>
         </div>

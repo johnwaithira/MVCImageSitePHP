@@ -11,3 +11,6 @@ Route::get('/gallery', 'view');
 
 Route::post('/upimageuploadload', 'Post Upload');
 Route::post('/upload', [ImageUpload::class, 'imageupload']);
+Route::post('/brokenlink', function(){
+    var_dump($_POST);
+});
