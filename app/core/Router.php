@@ -119,4 +119,6 @@ class Router
         include_once Application::$rootpath."/resources/views/$view.php";
         echo ob_get_clean();
     }
+
+
 }

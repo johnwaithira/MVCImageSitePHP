@@ -19,4 +19,5 @@ class Route
     {
         return Application::$app->router->resources($res);
     }
+
 }
