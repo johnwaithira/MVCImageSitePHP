@@ -10,6 +10,8 @@ class ImageUpload extends Controller
 {
     public function imageupload()
     {
+        $this->setLayout('layouts.app');
+
         $db = Application::$app->db;
         $app = new FileHandler($db);
 
@@ -21,6 +23,6 @@ class ImageUpload extends Controller
             $message = "Failed to make changes in the database";
         }
 
-        echo $message;
+        return $this->view('upload', ['message' => 'Image(s) uploaded successfully ']);
     }
 }
